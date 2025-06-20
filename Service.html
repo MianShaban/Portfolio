@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Dev Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+ body {
+  background-color: #000;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+/* Pseudo-element for rotating background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 1080px;
+  height: 1080px;
+  transform: translate(-50%, -50%);
+  background-image: url("images/model-p-2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  animation: rotateImage 20s linear infinite;
+  z-index: -1;
+  opacity: 0.5;
+  pointer-events: none; /* ✅ Important: allows clicks and scroll */
+  min-height: 100vh;
+
+}
+
+
+@keyframes rotateImage {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+  header nav a {
+      font-size: 0.75rem;
+      font-weight: normal;
+    }
+    .blur-bg {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+    }
+
+
+      .glass-btn {
+        border: 1px solid #ffffff44;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s;
+      }
+      .glass-btn:hover {
+        background-color: #ffffff11;
+        border-color: white;
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen flex flex-col items-center justify-center px-4 py-12">
+
+  <!-- Header -->
+    <header class="w-full flex justify-between items-start mb-10 mt-0 blur-bg">
+    <div class="text-2xl font-bold leading-tight">MUHAMMAD <br> SHABAN</div>
+     <div class="text-white font-mono text-sm leading-tight">
+        <p><a href="./index.html" class="hover:underline">Home</a></p>
+        <p><a href="./Projects.html" class="hover:underline">Projects</a></p>
+        <p><a href="./Service.html" class="hover:underline">Services</a></p>
+      </div>
+  </header>
+
+  <!-- Content Wrapper -->
+  <div class="max-w-5xl w-full px-2">
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+
+      <!-- Right Content -->
+      <div>
+        <!-- DESIGN SERVICES -->
+        <h2 class="text-xl font-bold mb-2">DESIGN SERVICES</h2>
+        <div class="flex gap-3 mb-4">
+          <img src="https://img.icons8.com/color/48/figma.png" class="h-8" />
+          <img src="https://img.icons8.com/fluency/48/web-design.png" class="h-8" />
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" class="h-8" />
+        </div>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <button class="glass-btn">Web Design</button>
+          <button class="glass-btn">Social Media Posts</button>
+          <button class="glass-btn">Story Design</button>
+          <button class="glass-btn">Facebook Ads Design</button>
+          <button class="glass-btn">Instagram Feed Styling</button>
+          <button class="glass-btn">Account Branding</button>
+          <button class="glass-btn">Account Handling</button>
+          <button class="glass-btn">Meta adds</button>
+        </div>
+
+        <!-- DEVELOPMENT SERVICES -->
+        <h2 class="text-xl font-bold mb-2">DEVELOPMENT SERVICES</h2>
+        <div class="flex gap-3 mb-4 flex-wrap">
+          <img src="https://img.icons8.com/offices/30/react.png" class="h-8" />
+          <img src="https://img.icons8.com/color/48/wordpress.png" class="h-8" />
+          <img src="https://img.icons8.com/color/48/html-5--v1.png" class="h-8" />
+          <img src="https://img.icons8.com/color/48/bootstrap.png" class="h-8" />
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/plugin.png" class="h-8" />
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button class="glass-btn">HTML Development</button>
+          <button class="glass-btn">Frontend Development</button>
+          <button class="glass-btn">Backend Development</button>
+          <button class="glass-btn">Cloud Hosting</button>
+          <button class="glass-btn">DataBase Migration</button>
+          <button class="glass-btn">Hosting Migration</button>
+          <button class="glass-btn">CSS/Bootstrap Styling</button>
+          <button class="glass-btn">React.js Development</button>
+          <button class="glass-btn">WordPress Customization</button>
+          <button class="glass-btn">WordPress Plugins</button>
+          <button class="glass-btn">Theme Development</button>
+          <button class="glass-btn">Elementor / Page Builders</button>
+          <button class="glass-btn">WooCommerce Setup</button>
+          <button class="glass-btn">SEO Optimization</button>
+          <button class="glass-btn">Speed Optimization</button>
+          <button class="glass-btn">Shopify</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+     body {
+  background-color: #000;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 1080px;
+  height: 1080px;
+  transform: translate(-50%, -50%);
+  background-image: url("images/model-p-1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  animation: floatUpDown 5s ease-in-out infinite;
+  z-index: -1;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(30px);
+  }
+}
+    .project-card img {
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .project-card:hover img.primary {
+      opacity: 0;
+    }
+    .project-card:hover img.secondary {
+      opacity: 1;
+    }
+    .project-card img.secondary {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    .project-card {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .section-divider {
+      height: 2px;
+      background: linear-gradient(to right, transparent, white, transparent);
+      margin: 3rem 0;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    header nav a {
+      font-size: 0.75rem;
+      font-weight: normal;
+    }
+    .blur-bg {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+    }
+    /* .image-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .5rem;
+    } */
+    .project-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+
+      .glass-btn {
+        border: 1px solid #ffffff44;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s;
+      }
+      .glass-btn:hover {
+        background-color: #ffffff11;
+        border-color: white;
+      }
+    /* section {
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.3) !important;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 0.5rem;
+    } */
+  </style>
+</head>
+
+<body class="min-h-screen p-6">
+  <header class="flex justify-between items-start mb-10 blur-bg">
+    <div class="text-2xl font-bold leading-tight">MUHAMMAD <br> SHABAN</div>
+    <div class="text-white font-mono text-sm leading-tight">
+        <p><a href="./index.html" class="hover:underline">Home</a></p>
+        <p><a href="./Projects.html" class="hover:underline">Projects</a></p>
+        <p><a href="./Service.html" class="hover:underline">Services</a></p>
+      </div>
+  </header>
+
+  <!-- <section class="space-y-20"> -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+      <div class="space-y-4">
+        <h2 class="text-3xl font-bold">Featured Portfolio</h2>
+        <p>I designed and developed these showcase projects with React , Tailwind , Bootstrap and HTML in 2024...Till now </p>
+        <p>Custom WordPress websites built for performance, responsiveness, and easy content management—tailored to your brand and goals to create more absorbing user experiences.</p>
+        <p>Click to view each project in detail.</p>
+      </div>
+    </div>
+  <!-- </section> -->
+
+  <div class="section-divider"></div>
+
+  <!-- Frontend Projects -->
+   <section class="section-frontend">
+    <h3 class="text-2xl font-semibold mb-4">Frontend Projects</h3>
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+      <div class="space-y-2">
+        <p>Modern UI using React.js & Tailwind</p>
+        <p>Responsive layouts and animations</p>
+        <p>Integrated with APIs for dynamic content</p>
+      </div>
+      <!-- <div class="image-grid"> -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+        <a href="https://github.com/MianShaban/NEtflix-Clone" target="_blank" class="project-card">
+          <img src="./images/fe-1.0.png" alt="Frontend 1" class="primary rounded" />
+          <img src="./images/fe-1.1.png?text=Hover+Image+1" alt="Hover Frontend 1" class="secondary rounded" />
+        </a>
+        <a href="https://github.com/MianShaban/Apple-Replica" target="_blank" class="project-card">
+          <img src="./images/fe-2.1.png" alt="Frontend 2" class="primary rounded" />
+          <img src="./images/fe-2.0.png?text=Hover+Image+2" alt="Hover Frontend 2" class="secondary rounded" />
+        </a>
+        <a href="https://github.com/MianShaban/Tax-Consulation" target="_blank" class="project-card">
+          <img src="./images/fe-3.0.png" alt="Frontend 3" class="primary rounded" />
+          <img src="./images/fe-3.1.png?text=Hover+Image+3" alt="Hover Frontend 3" class="secondary rounded" />
+        </a>
+        <a href="https://github.com/MianShaban/Gucci" target="_blank" class="project-card">
+          <img src="./images/fe-4.0.png" alt="Frontend 4" class="primary rounded" />
+          <img src="./images/fe-4.1.png?text=Hover+Image+4" alt="Hover Frontend 4" class="secondary rounded" />
+        </a>
+
+        <a href="https://github.com/MianShaban" class="mt-10"><button class="glass-btn">Show More</button></a>
+      </div>
+    </div>
+  </section> 
+
+  <div class="section-divider"></div>
+
+  <!-- WordPress Projects -->
+  <section class="section-wordpress">
+    <h3 class="text-2xl font-semibold mb-4">WordPress Projects</h3>
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+      <div class="space-y-2">
+        <p>Custom theme development</p>
+        <p>WooCommerce integration</p>
+        <p>Performance & SEO optimized</p>
+      </div>
+      <!-- <div class="image-grid"> -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+        <a href="https://rtbinstitute.org/" target="_blank" class="project-card">
+          <img src="./images/wp1.1.png" alt="WP 1" class="primary rounded" />
+          <img src="./images/wp-1.0.png?text=Hover+WP1" alt="Hover WP 1" class="secondary rounded" />
+        </a>
+        <a href="https://applefixers.pk/" target="_blank" class="project-card">
+          <img src="./images/wp-2.0.png" alt="WP 2" class="primary rounded" />
+          <img src="./images/wp-2.1.png?text=Hover+WP2" alt="Hover WP 2" class="secondary rounded" />
+        </a>
+         <a href="https://techrystal.com/" target="_blank" class="project-card">
+          <img src="./images/wp-3.1.png" alt="WP 2" class="primary rounded" />
+          <img src="./images/wp-3.0.png?text=Hover+WP2" alt="Hover WP 2" class="secondary rounded" />
+        </a>
+         <a href="https://devtrain.co/" target="_blank" class="project-card">
+          <img src="./images/wp-4.0.png" alt="WP 2" class="primary rounded" />
+          <img src="./images/wp4.1.png?text=Hover+WP2" alt="Hover WP 2" class="secondary rounded" />
+        </a>
+          <a href="https://tampereeagles.com/" target="_blank" class="project-card">
+          <img src="./images/wp5.0.png" alt="WP 2" class="primary rounded" />
+          <img src="./images/wp-5.1.png?text=Hover+WP2" alt="Hover WP 2" class="secondary rounded" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- MERN Stack Projects -->
+  <section class="section-mern">
+    <h3 class="text-2xl font-semibold mb-4">MERN Stack Projects</h3>
+    <div class="grid md:grid-cols-2 gap-10 items-start">
+      <div class="space-y-2">
+        <p>Full-stack web apps using MongoDB, Express, React, Node</p>
+        <p>Authentication, CRUD functionality</p>
+        <p>Responsive dashboards with real-time features</p>
+      </div>
+      <!-- <div class="image-grid"> -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+        <a href="https://devtrained.com/" target="_blank" class="project-card">
+          <img src="./images/mernstack-1.1.png" alt="MERN 1" class="primary rounded" />
+          <img src="./images/merstack-1.0.png" alt="Hover MERN 1" class="secondary rounded" />
+        </a>
+        <a href="https://weather-application-rho-seven.vercel.app/" target="_blank" class="project-card">
+          <img src="./images/mern-2.0.png" alt="MERN 2" class="primary rounded" />
+          <img src="./images/mern-2.1.png" alt="Hover MERN 2" class="secondary rounded" />
+        </a> 
+       
+        <a href="https://github.com/MianShaban/Travel-Planner" class="mt-10"><button class="glass-btn">Show More</button></a>
+
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
